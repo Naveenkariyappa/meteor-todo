@@ -36,14 +36,14 @@ export default class Task extends Component {
 
     return (
       <li className={taskClassName}>
-        {this.props.showPrivateButton ? (
+        {this.props.isPrivate ? (
           <button className="delete" onClick={this.deleteThisTask.bind(this)}>
             &times;
           </button>
         ) : (
           ""
         )}
-        {this.props.showPrivateButton ? (
+        {this.props.isPrivate ? (
           <input
             type="checkbox"
             readOnly
@@ -53,7 +53,7 @@ export default class Task extends Component {
         ) : (
           ""
         )}
-        {this.props.showPrivateButton ? (
+        {this.props.isPrivate ? (
           <button
             className="toggle-private"
             onClick={this.togglePrivate.bind(this)}
